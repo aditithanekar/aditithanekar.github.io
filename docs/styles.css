@@ -198,26 +198,30 @@ button:hover {
 }
 
 .paint {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #f40047;
     font-size: 61px;
     color: white;
+    text-decoration: none;
     /*padding:76px 166px;*/
 }
-.compsci {
+#compsci {
     background-color: #430094;
-    font-size: 45px;
+    /* font-size: 45px; */
     color: white;
    /* padding: 64.5px 70.5px;*/
 }
-.vga {
+#vga {
     background-color: #138d00;
-    font-size: 40px;
+    /* font-size: 40px; */
     color: white;
    /* padding: 67px 25px;*/
 }
-.viewAll {
+#viewAll {
     background-color: #ff5129;
-    font-size: 42px;
+    /* font-size: 42px; */
     color: white;
     /*padding: 65px 61px;*/
 }
