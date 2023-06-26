@@ -72,13 +72,14 @@ li a:hover{
     justify-content:center;
     align-items: flex-end;
     background-image: url('./assets/img/1x/Asset\ 5.png');
+    
     height:auto;
     height:100vh;
     background-repeat: no-repeat;
     /* object-fit:   contain; */
     zoom: normal;
     margin-top: none;
-    margin-right: 4rem;
+    margin-right: none;
 }
 
 
@@ -169,8 +170,8 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    color: #85e0e0;
+.paint:hover {
+    /* color: #85e0e0; */
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     opacity: 0.8;
 }
@@ -257,7 +258,7 @@ p {
 }
 .about-container {
     /*width: minmax(200px, 300px)*/
-    width: clamp(23ch, 50%, 69ch);
+    width: clamp(23ch, 50%, 73ch);
     font-size: clamp(12px, 50%, 18px);
 }
 .about-page {
@@ -477,4 +478,12 @@ p {
     }
  }
 
-/*background-image: url('./assets/svg/background.svg');*/
+/*background-image: url('./assets/svg/background.svg');*/}
+/* code for the compsci.html  */
+.csproj 
+{
+    background-color: #007b79;
+    border-radius:10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
