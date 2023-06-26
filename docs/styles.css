@@ -484,6 +484,13 @@ p {
 {
     background-color: #007b79;
     border-radius:10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding:3%;
+}
+.csprojcontain 
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
