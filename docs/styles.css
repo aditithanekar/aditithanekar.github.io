@@ -5,10 +5,12 @@ html {
 }
 
 body {
-    background-color:#d9f3ff;
     width: 100%;
-    height: 100%;
+    height: 100%; 
     margin:0px;
+    background: linear-gradient( #d9f3ff 0%, #ffe5d9 100%);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
     padding:0px;
     
 }
@@ -60,6 +62,11 @@ li a:hover{
     transform: translate(0px, 6px) scale(1.2);
     letter-spacing:0.1em;
 }
+.contact img:hover 
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    opacity:95%;
+}
 
 .hi {
     margin: 20px;
@@ -68,18 +75,23 @@ li a:hover{
 
 .first {
     display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: flex-end;
-    background-image: url('./assets/img/1x/Asset\ 5.png');
-    
+    flex-direction:row-reverse;
+    justify-content:space-around;
+    align-items:center;
     height:auto;
-    height:100vh;
-    background-repeat: no-repeat;
-    /* object-fit:   contain; */
+    object-fit:   contain;
     zoom: normal;
+    padding:5%;
     margin-top: none;
     margin-right: none;
+}
+.intro-text
+{
+    text-align: center;
+}
+#intro-tagline
+{
+    width:40ch;
 }
 
 
@@ -124,11 +136,15 @@ h1 {
 .compaditi{
     min-width: 100px;
 }
-#aditi_graphic_phone{
+.aditi-graphic-svg
+{
+    width:400px;
+}
+/* #aditi_graphic_phone{
     width: 200px;
     display: none;
     align-self: flex-start;
-}
+} */
 
 h3 {
     text-align: center;
@@ -249,6 +265,7 @@ button {
 
 h4{
     font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
     width:minmax(100px, 400px)
 }
 /*code for about page */
@@ -276,16 +293,26 @@ p {
 /*code for contact page*/
 .contact {
     display: flex;
-    flex-direction:row-reverse;
+    flex-direction:row;
     justify-content: space-around;
     
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,2fr);
     grid-auto-rows: auto;
     list-style-type: none;
+    gap:20px;
+}
+.contact-description
+{
+    width:50ch;
+
+}
+.socials
+{
+    border-radius: 20px;
 }
 
 /*for portfolio page*/
@@ -435,19 +462,19 @@ p {
     }
 
 
-@media only screen and (max-width: 415px) {
+/* @media only screen and (max-width: 415px) {
 
     #aditi_graphic_phone{
         display: flex;
         float: left;
 
     }       
-}
-@media only screen and (max-width: 415px) {
+} */
+/* @media only screen and (max-width: 415px) {
     #left-cloud{
         display: none;
         }       
-}
+} */
 @media only screen and (max-width: 415px) {
     .container3 {
         display: grid;
@@ -466,7 +493,7 @@ p {
 
  }
 
- @media only screen and (max-width: 768px) {
+ /* @media only screen and (max-width: 768px) {
     .compaditi::before{
         content: url(/assets/img/SVG/aditiinterestsizephoneAsset\ 4.svg);
         display:flex;
@@ -476,21 +503,41 @@ p {
     .compaditi{
         display: none;
     }
- }
+ } */
 
 /*background-image: url('./assets/svg/background.svg');*/}
 /* code for the compsci.html  */
 .csproj 
 {
-    background-color: #007b79;
+    background-color: white;
     border-radius:10px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 6%;
+    margin-right: 6%;
     padding:3%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+a
+{
+    text-decoration: none;
 }
 .csprojcontain 
+{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: auto;
+    gap:30px;
+}
+.github-click
 {
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+}
+i
+{
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: bold;
 }
