@@ -470,11 +470,42 @@ p {
 
     }       
 } */
-/* @media only screen and (max-width: 415px) {
-    #left-cloud{
+@media only screen and (max-width: 415px) {
+    .aditi-graphic-svg{
         display: none;
         }       
-} */
+    .first
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    h2
+    {
+        font-size: 30px;
+    }
+    #intro-tagline
+    {
+        font-size: 14px;
+    }
+    .about-page
+    {
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-container
+    {
+        width:50ch;
+    }
+    #me-about
+    {
+        width:80%;
+        margin:none;
+    }
+}
 @media only screen and (max-width: 415px) {
     .container3 {
         display: grid;
@@ -493,17 +524,12 @@ p {
 
  }
 
- /* @media only screen and (max-width: 768px) {
-    .compaditi::before{
-        content: url(/assets/img/SVG/aditiinterestsizephoneAsset\ 4.svg);
-        display:flex;
-        width: 250px;
-        stroke-width: 0.1px;
+@media only screen and (max-width: 768px) {
+    .aditi-graphic-svg
+    {
+        width:20px;
     }
-    .compaditi{
-        display: none;
-    }
- } */
+ } 
 
 /*background-image: url('./assets/svg/background.svg');*/}
 /* code for the compsci.html  */
