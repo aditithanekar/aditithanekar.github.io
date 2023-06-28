@@ -166,7 +166,26 @@ h3 {
 /* #homeTextContactDescribe{ */
     /* width:clamp(30ch, 50%, 60ch) */
 /* } */
-
+@media only screen and (max-width: 768px) {
+    .box-container button {
+        border-radius: 7px;
+    }
+    .csproj img 
+    {
+        width:70%;
+    }
+    .csprojcontain 
+    {
+        display: grid;
+        justify-content: space-around;
+        grid-auto-rows: auto;
+        gap: 20px;
+    }
+    .csprojcontain .csproj h4
+    {
+        font-size: 16px;
+    }
+}
 .box-container .paint{
     font-family: 'Encode Sans Condensed', sans-serif;
     border-radius: 2px;
@@ -419,12 +438,24 @@ p {
 }
 */
 
+
 @media only screen and (max-width: 768px) {
-    .box-container button {
-        border-radius: 7px;
+    .percussion
+    {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .percussion iframe 
+    {
+        width:70%;
+    }
+    .flatio iframe
+    {
+        width:70%;
+        height:70%;
     }
 }
-
 @media only screen and (max-width: 768px) {
     .first{
         max-height: 60vh;
