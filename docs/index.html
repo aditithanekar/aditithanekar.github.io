@@ -106,22 +106,22 @@
 
 //smile
     gsap.to("#mouth", 0.3, {transformOrigin:"center center", scaleY:0, opacity:0, repeat:-1, repeatDelay:5, yoyo:true})
-    gsap.to("#smile-close", 2, {scaleX:1.1, repeat:-1, repeatDelay:2, yoyo:true} )
+    gsap.to("#smile-close", 2, {scaleX:1, repeat:-1, repeatDelay:2, yoyo:true} )
 
 //eyes
     gsap.to("#eye-left", 0.1, {scaleY:0.1, transformOrigin:"center center", repeat:-1, repeatDelay:0.9, yoyo:true, ease: "expo.in"})
     gsap.to("#eye-right", 0.1, {scaleY:0.1, transformOrigin:"center center", repeat:-1, repeatDelay:0.9, yoyo:true, ease: "expo.in" })
 
 //hair
-    gsap.to("#bangs-left", 3, {rotation:"10deg", repeat:-1, yoyo:true, repeatDelay:2.5})
-    gsap.to("#bangs-right", 3, {rotation:"-8deg", repeat:-1, repeatDelay:2, yoyo:true})
+    gsap.to("#bangs-left", 3, {transformOrigin:"center center",rotation:"10deg", repeat:-1, yoyo:true, repeatDelay:2.5})
+    gsap.to("#bangs-right", 3, {transformOrigin:"center center",rotation:"-8deg", repeat:-1, repeatDelay:2, yoyo:true})
 
 //flowers
     gsap.to("#flower-left_1_", 1, {scale:1.1, repeat:-1, yoyo:true, rotation:"-6deg"})
     gsap.to("#flower-right_1_", 1, {scale:1.09, repeat:-1, yoyo:true, rotation:"6deg"})
 //paint
-    gsap.to("path.cls-2", {duration: 2, rotation:"-5deg", repeat:-1, yoyo:true, scale:0.9})
-    gsap.to("path.cls-1", {duration: 2, rotation:"-5deg", repeat:-1, yoyo:true, scale:0.9})
+    gsap.to("path.cls-2", {duration: 2, rotation:"2deg", repeat:-1, yoyo:true, scale:1})
+    gsap.to("path.cls-1", {duration: 2, rotation:"2deg", repeat:-1, yoyo:true, scale:1})
     gsap.to(".paintbrush", {duration: 2, rotation:"-5deg", repeat:-1, yoyo:true, scale:0.9})
 
 //text
