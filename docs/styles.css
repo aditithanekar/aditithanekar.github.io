@@ -612,6 +612,7 @@ p {
         width:35px;
     }
 }
+
 @media only screen and (max-width: 415px) {
     .container3 {
         display: grid;
@@ -637,6 +638,16 @@ p {
     }
  } 
 
+ @media only screen and (max-width: 515px) {
+    .aditi-graphic-svg
+    {
+        width:15px;
+    }
+    h2
+    {
+        font-size: 20px;
+    }
+ } 
 /*background-image: url('./assets/svg/background.svg');*/}
 /* code for the compsci.html  */
 .csproj 
