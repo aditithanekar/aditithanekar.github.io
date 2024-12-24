@@ -702,3 +702,32 @@ i
     justify-content: center;
     align-items: center;
 }
+
+/* For iPhone 15 Plus and 15 Pro Max */
+@media only screen and (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 40px;
+    }
+    .intro-text h2 {
+        font-size: 20px;
+    }
+
+    .intro-text p {
+        font-size: 12px;
+        padding: 0 0px;
+        width: 20px;
+    }
+    .first
+    {
+        padding:none;
+    }
+
+    .contact-button a {
+        padding: 12px 25px;
+    }
+
+    .aditi-graphic-svg {
+        width: 10px;
+        margin: 0 auto;
+    }
+}
