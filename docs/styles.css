@@ -88,10 +88,25 @@ li a:hover{
 .intro-text
 {
     text-align: center;
+    position: relative; /* Anchor for positioning */
 }
 #intro-tagline
 {
     width:40ch;
+}
+.tagline
+{
+    position: absolute;
+    top: calc(100%-50px); /* Position below the reference-div with a gap */
+    transform: translateY(-100%);
+    transform: translateX(+25%); /* Adjust for centering */
+    padding-bottom: 40px;
+    margin-bottom: 20%;
+    
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center; */
 }
 
 
@@ -177,6 +192,10 @@ h3 {
     #octocat
     {
         width:40px;
+    }
+    #youtubelink
+    {
+        width: 45px;
     }
     .csprojcontain 
     {
@@ -417,6 +436,7 @@ p {
     flex-direction: row;
     justify-content: space-around;
 }
+
     
 @media only screen and (max-width: 375px) {
     .contact-button a {
@@ -484,7 +504,7 @@ p {
 @media only screen and (max-width: 900px) {
     .aditi-graphic-svg
     {
-        width:300px;
+        width:280px;
     }
     .intro-text
     {
@@ -508,6 +528,18 @@ p {
         width:45vw;
     } */
 }
+@media only screen and (max-width: 880px)
+{
+    .intro-text
+    {
+        /* width:40vw; */
+        font-size: 80%;
+    }
+    .aditi-graphic-svg
+    {
+        width:200px;
+    }
+}
 @media only screen and (max-width: 550px) 
 {
     h2
@@ -522,7 +554,15 @@ p {
     }
     .aditi-graphic-svg
     {
-        width:260px;
+        width:230px;
+    }
+    .intro-text
+    {
+        font-size: 90%;
+    }
+    h2
+    {
+        font-size: 80%;
     }
 
 }
@@ -572,6 +612,7 @@ p {
         display:flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         
     }
     .intro-text
@@ -631,23 +672,32 @@ p {
 
  }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .aditi-graphic-svg
     {
         width:20px;
     }
- } 
+ }  */
 
- @media only screen and (max-width: 515px) {
+@media only screen and (max-width: 515px) {
     .aditi-graphic-svg
     {
-        width:15px;
+        width:180px;
     }
     h2
     {
         font-size: 20px;
     }
- } 
+    .intro-text
+    {
+        padding-top: 120px;
+        width:100%;
+    }
+    #intro-tagline
+    {
+        padding-top: 100px;
+    }
+} 
 /*background-image: url('./assets/svg/background.svg');*/}
 /* code for the compsci.html  */
 .csproj 
@@ -727,7 +777,23 @@ i
     }
 
     .aditi-graphic-svg {
-        width: 10px;
-        margin: 0 auto;
+        width:200px;
+        padding:none;
+    }
+    /* #intro-tagline
+    {
+        width:30ch;
+        padding: 0 0px;
+    } */
+    .intro-text
+    {
+        padding:none;
+    }
+}
+@media only screen and (max-width: 460px) 
+{
+    #intro-tagline
+    {
+        width:35ch;
     }
 }
