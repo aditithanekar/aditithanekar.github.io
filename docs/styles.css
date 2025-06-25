@@ -394,6 +394,14 @@ p {
 .margin{
     margin:30px;
 }
+.margin2
+{
+    margin:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 /* bottom nav  bar*/
 .last nav ul {
     display:flex;
