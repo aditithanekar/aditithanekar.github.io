@@ -635,23 +635,28 @@ p {
 } */
 @media only screen and (max-width: 415px) {
            
-    .first
+    /* .first
     {
         display:flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
-    }
+    } */
     .intro-text
     {
         width:90vw;
         display:flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     h2
     {
         font-size: 30px;
+    }
+    .hi2 h1
+    {
+        font-size: 55px;
     }
     #intro-tagline
     {
