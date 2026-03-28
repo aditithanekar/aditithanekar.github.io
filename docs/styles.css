@@ -1,18 +1,19 @@
-html {
+html,
+body {
     width: 100%;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
-    /*overflow-x: hidden;*/
+    /* base for flex-grow to have context */
 }
 
 body {
-    width: 100%;
-    height: 100%; 
-    margin:0px;
-    background: linear-gradient( #d9f3ff 0%, #ffe5d9 75%);
-    background-repeat:no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#d9f3ff 0%, #ffe5d9 75%);
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    padding:0px;
-    
 }
 
 .topnav-bar nav #top {
@@ -22,11 +23,12 @@ body {
     align-items: center;
     list-style-type: none;
     margin: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color:#9fcfdf;
+    padding: 15px 0px;
+    background: rgba(159, 207, 223, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
 }
 
 .first nav ul{	
@@ -90,19 +92,69 @@ li a:hover{
     text-align: center;
     position: relative; /* Anchor for positioning */
 }
-#intro-tagline
-{
-    width:40ch;
+
+#intro-tagline {
+    width: 40ch;
 }
-.tagline
-{
+
+/* skill badge pills */
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+    justify-content: center;
+}
+
+.badge {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 200ms ease;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.badge-gpu {
+    background: linear-gradient(135deg, rgba(123, 47, 247, 0.75), rgba(87, 101, 232, 0.75));
+}
+
+.badge-graphics {
+    background: linear-gradient(135deg, rgba(231, 57, 79, 0.75), rgba(249, 123, 62, 0.75));
+}
+
+.badge-creative {
+    background: linear-gradient(135deg, rgba(29, 170, 138, 0.75), rgba(47, 173, 212, 0.75));
+}
+
+.badge-teach {
+    background: linear-gradient(135deg, rgba(230, 165, 41, 0.75), rgba(240, 108, 74, 0.75));
+}
+
+.tagline {
     position: absolute;
     top: calc(100%-50px); /* Position below the reference-div with a gap */
     transform: translateY(-100%);
     transform: translateX(+25%); /* Adjust for centering */
     padding-bottom: 40px;
     margin-bottom: 20%;
-    
+
     /* display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -111,10 +163,10 @@ li a:hover{
 
 
 h2 {
-    font-family: 'Catamaran', sans-serif;
-    font-size:60px;
-    font-weight: lighter;
-    font-stretch: wider;
+    font-family: 'Outfit', sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
     color: #0099af;
 }
 
@@ -155,6 +207,16 @@ h1 {
 {
     width:400px;
 }
+
+/* Make the inline SVG respect its CSS container width on all devices */
+.aditi-graphic-svg svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+    /* right cloud extends slightly past viewBox — let it show */
+}
+
 /* #aditi_graphic_phone{
     width: 200px;
     display: none;
@@ -179,7 +241,7 @@ h3 {
     margin-bottom: 30px;
 }
 /* #homeTextContactDescribe{ */
-    /* width:clamp(30ch, 50%, 60ch) */
+/* width:clamp(30ch, 50%, 60ch) */
 /* } */
 @media only screen and (max-width: 768px) {
     .box-container button {
@@ -204,9 +266,9 @@ h3 {
         grid-template-columns:auto;
         grid-auto-rows: minmax(90vw, auto);
         gap: 0.5rem
-        /* grid-template-columns: repeat(2,auto);
+            /* grid-template-columns: repeat(2,auto);
         grid-auto-rows: auto; */
-        
+
     }
     .csprojcontain .csproj h4
     {
@@ -278,13 +340,13 @@ button {
     background:linear-gradient( #ff6565 0%, #9fcfdf 75%) ;
     /* font-size: 45px; */
     color: white;
-   /* padding: 64.5px 70.5px;*/
+    /* padding: 64.5px 70.5px;*/
 }
 #vga {
     background:linear-gradient( #aeedaf 0%, #9fcfdf 75%) ;
     /* font-size: 40px; */
     color: white;
-   /* padding: 67px 25px;*/
+    /* padding: 67px 25px;*/
 }
 #viewAll {
     background-color: #ff5129;
@@ -345,7 +407,7 @@ p {
     display: flex;
     flex-direction:row;
     justify-content: space-around;
-    
+
 }
 
 .contact-grid {
@@ -404,7 +466,8 @@ p {
 }
 /* bottom nav  bar*/
 .last nav ul {
-    display:flex;
+    list-style-type: none;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -445,7 +508,7 @@ p {
     justify-content: space-around;
 }
 
-    
+
 @media only screen and (max-width: 375px) {
     .contact-button a {
         font-size: 1.5rem;
@@ -459,23 +522,23 @@ p {
         grid-template-columns:auto;
         grid-auto-rows: minmax(40px, auto);
         gap: 0.5rem
-}
-
-@media only screen and (max-width: 768px) {
-    h1 {
-        text-align: center;
-        font-size: 40px;
-        max-width: 320px;
     }
-}
-@media only screen and (max-width: 768px) {
-    #describe {
-        font-size: 18px;
-        width: clamp(10ch, 50%, 15ch);
 
+    @media only screen and (max-width: 768px) {
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            max-width: 320px;
+        }
     }
-}
-/*
+    @media only screen and (max-width: 768px) {
+        #describe {
+            font-size: 18px;
+            width: clamp(10ch, 50%, 15ch);
+
+        }
+    }
+    /*
 @media only screen and (max-width: 768px) {
     nav {
         justify-content: space-around;
@@ -485,100 +548,101 @@ p {
 */
 
 
-@media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
     .percussion
     {
         display:flex;
-        flex-direction: column;
-        align-items: center;
-    }
+            flex-direction: column;
+            align-items: center;
+        }
     .percussion iframe 
     {
         width:70%;
-    }
+        }
     .flatio iframe
     {
         width:70%;
         height:70%;
+        }
     }
-}
 @media only screen and (max-width: 970px)
 {
     .aditi-graphic-svg
     {
         padding-right:3%;
+        }
     }
-}
-@media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 900px) {
     .aditi-graphic-svg
     {
         width:280px;
-    }
+        }
     .intro-text
     {
         width:50vw;
-    }
+        }
     .first
     {
         font-size:90%;
-    }
+        }
     h2
     {
-        font-size: 40px;
-    }
+            font-size: 40px;
+        }
     h1
     {
         font-size:55px;
-    }
-    /* 
+        }
+        /* 
     #intro-tagline
     {
         width:45vw;
     } */
-}
+    }
 @media only screen and (max-width: 880px)
 {
     .intro-text
     {
-        /* width:40vw; */
-        font-size: 80%;
+            /* width:40vw; */
+            font-size: 80%;
+        }
+
+        .aditi-graphic-svg {
+            width: 210px;
+            /* +10px so right cloud isn't sub-pixel clipped */
+        }
     }
-    .aditi-graphic-svg
-    {
-        width:200px;
-    }
-}
 @media only screen and (max-width: 550px) 
 {
     h2
     {
-        font-size: 30px;
-    }
+            font-size: 30px;
+        }
 
-}
-@media only screen and (max-width: 768px) {
-    #me-about {
-        width: 190px;
     }
+    @media only screen and (max-width: 768px) {
+        #me-about {
+            width: 190px;
+        }
     .aditi-graphic-svg
     {
         width:230px;
-    }
+        }
     .intro-text
     {
-        font-size: 90%;
-    }
+            font-size: 90%;
+        }
     h2
     {
-        font-size: 80%;
-    }
+            font-size: 80%;
+        }
 
-}
-@media only screen and (max-width: 768px) {
-    h4 {
-        font-size:12px;
     }
-}
+    @media only screen and (max-width: 768px) {
+        h4 {
+        font-size:12px;
+        }
+    }
 }
 @media only screen and (max-width: 768px) {
     h3 {
@@ -593,9 +657,8 @@ p {
 }
 @media only screen and (max-width: 470px) {
 
-    .about-page
-    {
-        display:flex;
+    .about-page {
+        display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
@@ -604,142 +667,21 @@ p {
     {
         width:50ch;
     }
-    #me-about
-    {
-        width:80%;
-        margin:none;
+
+    #me-about {
+        width: 80%;
+        margin: none;
     }
 
 }
-@media only screen and (max-width: 415px) {
-    
-    .container1 {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 2px;
-        margin-right: 0px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
 
-
-/* @media only screen and (max-width: 415px) {
-
-    #aditi_graphic_phone{
-        display: flex;
-        float: left;
-
-    }       
-} */
-@media only screen and (max-width: 415px) {
-           
-    /* .first
-    {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    } */
-    .intro-text
-    {
-        width:90vw;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    h2
-    {
-        font-size: 30px;
-    }
-    .hi2 h1
-    {
-        font-size: 55px;
-    }
-    #intro-tagline
-    {
-        font-size: 14px;
-    }
-    .about-page
-    {
-        display:flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-    .about-container
-    {
-        width:50ch;
-    }
-    #me-about
-    {
-        width:80%;
-        margin:none;
-    }
-    .aditi-graphic-svg
-    {
-        display: none;
-    }
-    .last nav ul li img{
-        width:35px;
-    }
-}
-
-@media only screen and (max-width: 415px) {
-    .container3 {
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        grid-auto-rows: auto;
-        gap:30px;
-        justify-content: space-around;
-    }
-      
-}
-
-@media only screen and (max-width: 380px) {
-    .item{
-        max-width: 330px;
-    }
-
- }
-
-/* @media only screen and (max-width: 768px) {
-    .aditi-graphic-svg
-    {
-        width:20px;
-    }
- }  */
-
-@media only screen and (max-width: 515px) {
-    .aditi-graphic-svg
-    {
-        width:180px;
-    }
-    h2
-    {
-        font-size: 20px;
-    }
-    .intro-text
-    {
-        padding-top: 120px;
-        width:100%;
-    }
-    #intro-tagline
-    {
-        padding-top: 100px;
-    }
-} 
-/*background-image: url('./assets/svg/background.svg');*/}
-/* code for the compsci.html  */
-.csproj 
-{
+/* code for the compsci.html */
+.csproj {
     background-color: white;
-    border-radius:10px;
+    border-radius: 10px;
     margin-left: 6%;
     margin-right: 6%;
-    padding:3%;
+    padding: 3%;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     text-decoration: none;
@@ -752,11 +694,9 @@ a
 {
     display: grid;
     justify-content: space-around;
-    grid-template-columns: repeat(auto, 1fr);
+    grid-template-columns: repeat(auto-fill, 1fr);
     grid-auto-rows: minmax(200px, auto);
-    /* grid-template-columns: repeat(2,auto);
-    grid-auto-rows: auto; */
-    gap:20px;
+    gap: 20px;
 }
 .github-click
 {
@@ -786,47 +726,92 @@ i
     align-items: center;
 }
 
-/* For iPhone 15 Plus and 15 Pro Max */
-@media only screen and (max-width: 480px) {
-    .intro-text h1 {
-        font-size: 40px;
-    }
-    .intro-text h2 {
-        font-size: 20px;
+@media only screen and (max-width: 515px) {
+
+    /*
+     * Grid layout: [name | SVG] on top row, [description spanning full width below].
+     * display:contents on .intro-text lets .intro-name and .intro-desc
+     * participate directly as grid items.
+     */
+    .first {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        grid-template-areas:
+            "name svg"
+            "desc desc";
+        padding: 30px 20px;
+        gap: 25px 15px;
+        /* Tighter vertical gap for even cleaner look */
+        align-items: center;
+        align-content: center;
+        flex-grow: 1;
+        min-height: 65vh;
     }
 
+    .intro-aditi {
+        grid-area: svg;
+        align-self: center;
+    }
+
+    .intro-text {
+        display: contents;
+    }
+
+    /* transparent to grid */
+    /* transparent to grid */
+    .intro-name {
+        grid-area: name;
+        text-align: left;
+        padding-right: 8px;
+        /* balanced horizontal gap */
+    }
+
+    .intro-desc {
+        grid-area: desc;
+        text-align: center;
+        width: 100%;
+    }
+
+    #intro-tagline {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 400;
+        width: 100%;
+        max-width: 35ch;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+
+    .aditi-graphic-svg {
+        width: min(190px, 48vw);
+    }
+
+    .hi2 h1 {
+        font-family: 'Clicker Script', cursive;
+        font-size: 48px;
+    }
+
+    /* keep ~Aditi~ readable but not overpowering */
+    h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 24px;
+    }
+}
+
+/* For iPhone 15 Plus and 15 Pro Max */
+@media only screen and (max-width: 480px) {
     .intro-text p {
         font-size: 12px;
-        padding: 0 0px;
-        width: 20px;
-    }
-    .first
-    {
-        padding:none;
     }
 
     .contact-button a {
         padding: 12px 25px;
     }
-
-    .aditi-graphic-svg {
-        width:200px;
-        padding:none;
-    }
-    /* #intro-tagline
-    {
-        width:30ch;
-        padding: 0 0px;
-    } */
-    .intro-text
-    {
-        padding:none;
-    }
 }
-@media only screen and (max-width: 460px) 
-{
-    #intro-tagline
-    {
-        width:35ch;
+
+@media only screen and (max-width: 460px) {
+    #intro-tagline {
+        width: 35ch;
     }
 }
